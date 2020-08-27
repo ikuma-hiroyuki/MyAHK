@@ -10,9 +10,19 @@ GetSelectionString(urlEncode := false){
     Return query
 }
 
+TransParameter(waei,eiwa) {
+    selectionString := GetSelectionString(true)
+    match := RegExMatch(StrReplace(selectionString,"%0A"),"[a-zA-Z]")
+
+    if (match > 0) {
+        Return waei selectionString
+    } else {
+        Return eiwa selectionString
+    }
+}
+
 MouseCursorMove(direction, baisoku := false) {
     mouseSpeed := 10
-
     if (direction = "left"){
         x := -mouseSpeed
         y := 0

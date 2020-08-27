@@ -1,4 +1,4 @@
-WinMoveCenter(){
+﻿WinMoveCenter(){
     WinGetPos, x, y, appWidth, appHeight, A
     appWidth /= 2
     appHeight /= 2
@@ -45,7 +45,7 @@ WinResizeMenu(){
     Menu, winsize, show, % appWidth / 2 - 100 , % appHeight / 2 - 100
 }
 
-Return ; ???????s????
+Return ; 自動実行回避
 
 exp:
     WinResize(900,800)
