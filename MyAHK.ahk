@@ -51,7 +51,7 @@ googleTransSerch := "https://translate.google.com/#view=home&op=translate&sl=aut
 ; 一行削除
 ~vk1d & x::send,{end}{home}
 
-; 日付を出力
+; 今日の日付を出力
 ~VK1C & d::CurrentDate()
 
 ; 選択した文字をgoogle検索する
@@ -60,7 +60,7 @@ googleTransSerch := "https://translate.google.com/#view=home&op=translate&sl=aut
 ~vk1d & a::run,% amazonSerch GetSelectionString()
 ; 選択した文字を翻訳する
 ~VK1D & t::
-    if GetKeyState("VK1C"){
+    If GetKeyState("VK1C"){
         run,% googleTransSerch TransParameter("ja&text=","en&text=")
     }Else{
         run,% deeplSerch TransParameter("en/ja/","ja/en/")

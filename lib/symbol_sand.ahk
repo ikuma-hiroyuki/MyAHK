@@ -28,6 +28,8 @@ anyChar(){
     }
 }
 
+Return ; ©“®Às‰ñ”ğ
+
 SymbolSandwichMenu(){
     Menu, symbolMenu, add, % """ """ "`t" "&2",doubleCrotation
     Menu, symbolMenu, add, % "' '" "`t" "&7",singleCrotation
@@ -52,7 +54,7 @@ roundBracket:
     Return
 
 kagikakko:
-    SymbolSandwich("?u","?v")
+    SymbolSandwich("u","v")
     Return
 
 anySymbol:
