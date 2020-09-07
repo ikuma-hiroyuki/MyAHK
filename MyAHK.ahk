@@ -13,8 +13,8 @@ SetWorkingDir, %A_ScriptDir%
 
 googlSearch := "https://www.google.com/search?q="
 amazonSerch := "https://www.amazon.co.jp/s?k="
-deeplSerch := "https://www.deepl.com/translator#"
-googleTransSerch := "https://translate.google.com/#view=home&op=translate&sl=auto&tl="
+deeplTrans := "https://www.deepl.com/translator#"
+googleTrans := "https://translate.google.com/#view=home&op=translate&sl=auto&tl="
 
 #Include, %A_ScriptDir%\lib\component.ahk
 #Include, %A_ScriptDir%\lib\symbol_sand.ahk
@@ -60,10 +60,10 @@ googleTransSerch := "https://translate.google.com/#view=home&op=translate&sl=aut
 ~vk1d & a::run,% amazonSerch GetSelectionString()
 ; ‘I‘ð‚µ‚½•¶Žš‚ð–|–ó‚·‚é
 ~VK1D & t::
-    If GetKeyState("VK1C"){
-        run,% googleTransSerch TransParameter("ja&text=","en&text=")
+    if GetKeyState("ctrl"){
+        RunTrans(googleTrans)
     }Else{
-        run,% deeplSerch TransParameter("en/ja/","ja/en/")
+        RunTrans(deeplTrans)
     }
     Return
 
