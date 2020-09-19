@@ -15,6 +15,7 @@ googlSearch := "https://www.google.com/search?q="
 amazonSerch := "https://www.amazon.co.jp/s?k="
 deeplTrans := "https://www.deepl.com/translator#"
 googleTrans := "https://translate.google.com/#view=home&op=translate&sl=auto&tl="
+everythingCommand := "C:\Program Files\Everything\Everything.exe -s "
 
 #Include, %A_ScriptDir%\lib\component.ahk
 #Include, %A_ScriptDir%\lib\symbol_sand.ahk
@@ -54,6 +55,7 @@ googleTrans := "https://translate.google.com/#view=home&op=translate&sl=auto&tl=
 ; 今日の日付を出力
 ~VK1C & d::CurrentDate()
 
+#s::run,% everythingCommand """" GetSelectionString() """"
 ; 選択した文字をgoogle検索する
 ~vk1d & s::run,% googlSearch GetSelectionString()
 ; 選択した文字をAmazon検索する
