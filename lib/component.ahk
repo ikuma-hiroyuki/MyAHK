@@ -51,6 +51,10 @@ MouseCursorMove(direction, baisoku := false) {
     MouseClick,,x,y,,,U,R
 }
 
+MouseCursorMoveAppCenter(){
+    WinGetPos,,,appWidth,appHeight,A
+    MouseMove, appWidth/2, appHeight/2
+}
 
 CurrentDate(){
     currentClip := Clipboard

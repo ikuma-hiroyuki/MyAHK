@@ -67,7 +67,7 @@ everythingCommand := "C:\Program Files\Everything\Everything.exe -s "
     }Else{
         RunTrans(deeplTrans)
     }
-    Return
+Return
 
 ; windowà⁄ìÆ
 ~vk1d & left::WindowMove(-25, 0)
@@ -81,7 +81,7 @@ everythingCommand := "C:\Program Files\Everything\Everything.exe -s "
     } else {
         WinAutoResize()
     }
-    Return
+Return
 
 ;É}ÉEÉXëÄçÏ
 ~VK1C & l::Click,Left
@@ -93,6 +93,7 @@ everythingCommand := "C:\Program Files\Everything\Everything.exe -s "
 !right::MouseCursorMove("right")
 !up::MouseCursorMove("up")
 !down::MouseCursorMove("down")
+~VK1D & c::MouseCursorMoveAppCenter()
 
 +!left::MouseCursorMove("left", true)
 +!right::MouseCursorMove("right", true)
@@ -112,8 +113,7 @@ everythingCommand := "C:\Program Files\Everything\Everything.exe -s "
     } else {
         gosub, squareBrackets
     }
-    Return
-
+Return
 
 #IFWinActive ahk_exe Explorer.EXE
     F1::send,!vsf
