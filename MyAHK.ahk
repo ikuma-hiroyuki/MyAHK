@@ -57,9 +57,9 @@ everythingCommand := "C:\Program Files\Everything\Everything.exe -s "
 
 #s::run,% everythingCommand """" GetSelectionString() """"
 ; ‘I‘ğ‚µ‚½•¶š‚ğgoogleŒŸõ‚·‚é
-~vk1d & s::run,% googlSearch GetSelectionString()
+~vk1d & s::run,% googlSearch GetSelectionString(true)
 ; ‘I‘ğ‚µ‚½•¶š‚ğAmazonŒŸõ‚·‚é
-~vk1d & a::run,% amazonSerch GetSelectionString()
+~vk1d & a::run,% amazonSerch GetSelectionString(true)
 ; ‘I‘ğ‚µ‚½•¶š‚ğ–|–ó‚·‚é
 ~VK1D & t::
     if GetKeyState("ctrl"){
