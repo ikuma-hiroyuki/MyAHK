@@ -1,4 +1,4 @@
-SymbolSandwich(leftSymbol, rightSymbol){
+ï»¿SymbolSandwich(leftSymbol, rightSymbol){
     currentClip := Clipboard
     selectionString := GetSelectionString()
     isClipbordNothing := if InStr(selectionString, "`r`n") or (selectionString = "")
@@ -17,7 +17,7 @@ SymbolSandwich(leftSymbol, rightSymbol){
 
 anyChar(){
     CoordMode,Caret,Screen
-    InputBox, val, % "‹L†ƒyƒAo—Í", % ", ƒJƒ“ƒ}‚Å¶‰E‚ğ‹æØ‚è‚Ü‚·",,200,120, % A_CaretX, % A_CaretY + 50
+    InputBox, val, % "è¨˜å·ãƒšã‚¢å‡ºåŠ›", % ", ã‚«ãƒ³ãƒã§å·¦å³ã‚’åŒºåˆ‡ã‚Šã¾ã™",,200,120, % A_CaretX, % A_CaretY + 50
     if (ErrorLevel = 0) {
         ary := StrSplit(val, ",")
         if (ary.Length() = 2) {
@@ -28,43 +28,43 @@ anyChar(){
     }
 }
 
-Return ; ©“®Às‰ñ”ğ
+Return ; è‡ªå‹•å®Ÿè¡Œå›é¿
 
 SymbolSandwichMenu(){
     Menu, symbolMenu, add, % """ """ "`t" "&2",doubleCrotation
     Menu, symbolMenu, add, % "' '" "`t" "&7",singleCrotation
     Menu, symbolMenu, add, % "( )" "`t" "&8",roundBracket
-    Menu, symbolMenu, add, % "u v" "`t" "&9",kagikakko
+    Menu, symbolMenu, add, % "ã€Œ ã€" "`t" "&9",kagikakko
     Menu, symbolMenu, add, % "[ ]" "`t" "&[",squareBrackets
     Menu, symbolMenu, add, % "{ }" "`t" "&]",curlyBrackets
-    Menu, symbolMenu, add, % "”CˆÓ‚Ì•¶š" "`t" "&i",anySymbol
+    Menu, symbolMenu, add, % "ä»»æ„ã®æ–‡å­—" "`t" "&i",anySymbol
     Menu,symbolMenu,Show,% A_CaretX, % A_CaretY + 50
 }
 
 doubleCrotation:
     SymbolSandwich("""","""")
-    Return
+Return
 
 singleCrotation:
     SymbolSandwich("'","'")
-    Return
+Return
 
 roundBracket:
     SymbolSandwich("(",")")
-    Return
+Return
 
 kagikakko:
-    SymbolSandwich("u","v")
-    Return
+    SymbolSandwich("ã€Œ","ã€")
+Return
 
 anySymbol:
     anyChar()
-    Return
+Return
 
 squareBrackets:
     SymbolSandwich("[","]")
-    Return
+Return
 
 curlyBrackets:
-    SymbolSandwich("{","}")
-    Return
+SymbolSandwich("{","}")
+Return

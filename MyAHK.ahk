@@ -1,9 +1,9 @@
-; ^ = Ctrl
+ï»¿; ^ = Ctrl
 ; + = shIft
 ; ! = alt
 ; # = win
-; VK1C = •ÏŠ·
-; VK1D = –³•ÏŠ·
+; VK1C = å¤‰æ›
+; VK1D = ç„¡å¤‰æ›
 
 #SingleInstance, Force
 #UseHook
@@ -23,21 +23,21 @@ everythingCommand := "C:\Program Files\Everything\Everything.exe -s "
 
 ~vk1d & 0::Reload
 
-; Šg’£ƒRƒ“ƒeƒLƒXƒgƒƒjƒ…[•\¦
+; æ‹¡å¼µã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆãƒ¡ãƒ‹ãƒ¥ãƒ¼è¡¨ç¤º
 ~vk1d & r::send,+{F10}
 
-; ƒEƒBƒ“ƒhƒEØ‚è‘Ö‚¦
+; ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦åˆ‡ã‚Šæ›¿ãˆ
 ~vk1c & o::AltTab
 ~vk1c & i::ShiftAltTab
 
-;ƒEƒBƒ“ƒhƒE‚ğ•Â‚¶‚é
+;ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚’é–‰ã˜ã‚‹
 ~vk1d & 4::send,!{F4}
 
-; ƒEƒBƒ“ƒhƒE‚ğÅ¬‰»‚·‚é
+; ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚’æœ€å°åŒ–ã™ã‚‹
 ~vk1d & 1::WinMinimize, A
 
-;•¶š—ñ‘€-----------------------------------------------------------------------------------------
-; ƒJ[ƒ\ƒ‹‚ª“r’†‚Å‚à‰º‚Éˆês‘}“ü
+;æ–‡å­—åˆ—æ“-----------------------------------------------------------------------------------------
+; ã‚«ãƒ¼ã‚½ãƒ«ãŒé€”ä¸­ã§ã‚‚ä¸‹ã«ä¸€è¡ŒæŒ¿å…¥
 #Enter::send,{end}{enter}
 
 ; delete
@@ -46,21 +46,21 @@ everythingCommand := "C:\Program Files\Everything\Everything.exe -s "
 ; backspace
 ~vk1d & b::send,{backspace}
 
-; ƒNƒŠƒbƒvƒ{[ƒh—š—ğ•\¦
+; ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰å±¥æ­´è¡¨ç¤º
 ~vk1d & v::send,#v
 
-; ˆêsíœ
+; ä¸€è¡Œå‰Šé™¤
 ~vk1d & x::send,{end}{home}
 
-; ¡“ú‚Ì“ú•t‚ğo—Í
+; ä»Šæ—¥ã®æ—¥ä»˜ã‚’å‡ºåŠ›
 ~VK1C & d::CurrentDate()
 
 #s::run,% everythingCommand """" GetSelectionString() """"
-; ‘I‘ğ‚µ‚½•¶š‚ğgoogleŒŸõ‚·‚é
+; é¸æŠã—ãŸæ–‡å­—ã‚’googleæ¤œç´¢ã™ã‚‹
 ~vk1d & s::run,% googlSearch GetSelectionString(true)
-; ‘I‘ğ‚µ‚½•¶š‚ğAmazonŒŸõ‚·‚é
+; é¸æŠã—ãŸæ–‡å­—ã‚’Amazonæ¤œç´¢ã™ã‚‹
 ~vk1d & a::run,% amazonSerch GetSelectionString(true)
-; ‘I‘ğ‚µ‚½•¶š‚ğ–|–ó‚·‚é
+; é¸æŠã—ãŸæ–‡å­—ã‚’ç¿»è¨³ã™ã‚‹
 ~VK1D & t::
     if GetKeyState("ctrl"){
         RunTrans(googleTrans)
@@ -69,7 +69,7 @@ everythingCommand := "C:\Program Files\Everything\Everything.exe -s "
     }
 Return
 
-; windowˆÚ“®
+; windowç§»å‹•
 ~vk1d & left::WindowMove(-25, 0)
 ~vk1d & Right::WindowMove(25, 0)
 ~vk1d & up::WindowMove(0, -25)
@@ -83,7 +83,7 @@ Return
     }
 Return
 
-;ƒ}ƒEƒX‘€ì
+;ãƒã‚¦ã‚¹æ“ä½œ
 ~VK1C & l::Click,Left
 ~VK1C & r::Click,Right
 ~VK1C & j::Click,WheelDown
@@ -100,7 +100,7 @@ Return
 +!up::MouseCursorMove("up", true)
 +!down::MouseCursorMove("down", true)
 
-; ‹L†ƒyƒAo—Í-----------------------------------------------------------------------------------------
+; è¨˜å·ãƒšã‚¢å‡ºåŠ›-----------------------------------------------------------------------------------------
 ~VK1D & m::SymbolSandwichMenu()
 ~VK1D & 2::gosub, doubleCrotation
 ~VK1D & 7::gosub, singleCrotation
