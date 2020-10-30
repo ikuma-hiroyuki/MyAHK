@@ -14,7 +14,7 @@ SetWorkingDir, %A_ScriptDir%
 googlSearch := "https://www.google.com/search?q="
 amazonSerch := "https://www.amazon.co.jp/s?k="
 deeplTrans := "https://www.deepl.com/translator#"
-googleTrans := "https://translate.google.com/#view=home&op=translate&sl=auto&tl="
+googleTrans := "https://translate.google.com/#view=home&op=translate&"
 everythingCommand := "C:\Program Files\Everything\Everything.exe -s "
 
 #Include, %A_ScriptDir%\lib\component.ahk
